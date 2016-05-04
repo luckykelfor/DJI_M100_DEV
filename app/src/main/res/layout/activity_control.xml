@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextureView
+        android:id="@+id/textureView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true" />
+
+    <!-- 外层view，，用来实现画图效果 -->
+    <com.whu.m100.DrawView
+        android:id="@+id/drawView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/stateView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/batteryView"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:hint="@string/NA"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/GPSInfo"
+        android:layout_width="150sp"
+        android:layout_height="30sp"
+        android:layout_above="@+id/buttons"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:hint="@string/gps"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="30sp"
+            android:layout_weight="5">
+
+            <Button
+                android:id="@+id/button1"
+                style="?android:attr/buttonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/button_bg_color"
+                android:text="@string/initialize"
+                android:textColor="@drawable/button_font_color"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/button2"
+                style="?android:attr/buttonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/button_bg_color"
+                android:text="@string/start_mission"
+                android:textColor="@drawable/button_font_color"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/button3"
+                style="?android:attr/buttonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/button_bg_color"
+                android:text="@string/land"
+                android:textColor="@drawable/button_font_color"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/button4"
+                style="?android:attr/buttonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/button_bg_color"
+                android:text="@string/end_mission"
+                android:textColor="@drawable/button_font_color"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="30sp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/heightView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/skyblue"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
