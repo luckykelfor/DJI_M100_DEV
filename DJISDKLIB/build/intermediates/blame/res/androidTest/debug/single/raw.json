@@ -1,15 +1,15 @@
 [
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_1280x720_ins.h264",
-        "source": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_1280x720_ins.h264"
+        "merged": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_1280_3s.h264",
+        "source": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_1280_3s.h264"
     },
     {
         "merged": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\gimbal_param_infos",
         "source": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\gimbal_param_infos"
     },
     {
-        "merged": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_1280_3s.h264",
-        "source": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_1280_3s.h264"
+        "merged": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_1280x720_ins.h264",
+        "source": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_1280x720_ins.h264"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_1280_ins.h264",
@@ -28,12 +28,12 @@
         "source": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_960_3s.h264"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_848x480.h264",
-        "source": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_848x480.h264"
+        "merged": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\dock.ogg",
+        "source": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\dock.ogg"
     },
     {
-        "merged": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_1280x720_3s.h264",
-        "source": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_1280x720_3s.h264"
+        "merged": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\flyc_param_infos",
+        "source": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\flyc_param_infos"
     },
     {
         "merged": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_960x720_3s.h264",
@@ -44,8 +44,32 @@
         "source": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\flyc_param_infos"
     },
     {
+        "merged": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_1280_3s.h264",
+        "source": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_1280_3s.h264"
+    },
+    {
+        "merged": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_1280x720_3s.h264",
+        "source": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_1280x720_3s.h264"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_848x480.h264",
+        "source": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_848x480.h264"
+    },
+    {
+        "merged": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_848x480.h264",
+        "source": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_848x480.h264"
+    },
+    {
         "merged": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_1280x720_3s.h264",
         "source": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_1280x720_3s.h264"
+    },
+    {
+        "merged": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_1280_ins.h264",
+        "source": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_1280_ins.h264"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\flyc_param_infos",
+        "source": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\flyc_param_infos"
     },
     {
         "merged": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\dock.ogg",
@@ -56,28 +80,32 @@
         "source": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_1280x720_ins.h264"
     },
     {
+        "merged": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_640x480.h264",
+        "source": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_640x480.h264"
+    },
+    {
         "merged": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_1280_ins.h264",
         "source": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_1280_ins.h264"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\gimbal_param_infos",
-        "source": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\gimbal_param_infos"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\effect_tick.ogg",
-        "source": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\effect_tick.ogg"
     },
     {
         "merged": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_640x480.h264",
         "source": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_640x480.h264"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\flyc_param_infos",
-        "source": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\flyc_param_infos"
+        "merged": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\effect_tick.ogg",
+        "source": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\effect_tick.ogg"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\gimbal_param_infos",
+        "source": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\gimbal_param_infos"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\dock.ogg",
         "source": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\dock.ogg"
+    },
+    {
+        "merged": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_960_3s.h264",
+        "source": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_960_3s.h264"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_960x720_3s.h264",
@@ -88,12 +116,36 @@
         "source": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_960_3s.h264"
     },
     {
+        "merged": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_960x720_3s.h264",
+        "source": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_960x720_3s.h264"
+    },
+    {
         "merged": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\effect_tick.ogg",
         "source": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\effect_tick.ogg"
     },
     {
+        "merged": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_1280x720_p4.h264",
+        "source": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_1280x720_p4.h264"
+    },
+    {
         "merged": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_848x480.h264",
         "source": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_848x480.h264"
+    },
+    {
+        "merged": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_1280x720_ins.h264",
+        "source": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_1280x720_ins.h264"
+    },
+    {
+        "merged": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\effect_tick.ogg",
+        "source": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\effect_tick.ogg"
+    },
+    {
+        "merged": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_1280x720_3s.h264",
+        "source": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_1280x720_3s.h264"
+    },
+    {
+        "merged": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\gimbal_param_infos",
+        "source": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\gimbal_param_infos"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_1280x720_p4.h264",

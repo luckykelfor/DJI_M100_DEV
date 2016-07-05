@@ -43,6 +43,14 @@
         android:hint="@string/gps"
         android:textSize="12sp" />
 
+    <TextView
+        android:id="@+id/velInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/GPSInfo"
+        android:layout_alignParentEnd="true"
+        android:hint="velocity" />
+
     <LinearLayout
         android:id="@+id/buttons"
         android:layout_width="match_parent"

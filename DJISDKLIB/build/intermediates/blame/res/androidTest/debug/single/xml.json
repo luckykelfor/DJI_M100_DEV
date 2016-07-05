@@ -4,6 +4,10 @@
         "source": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\xml\\accessory_filter.xml"
     },
     {
+        "merged": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\accessory_filter.xml",
+        "source": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\xml\\accessory_filter.xml"
+    },
+    {
         "merged": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\accessory_filter.xml",
         "source": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\xml\\accessory_filter.xml"
     }

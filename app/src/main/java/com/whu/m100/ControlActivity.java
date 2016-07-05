@@ -22,6 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.UnsupportedEncodingException;
+import java.math.BigDecimal;
 
 import dji.sdk.AirLink.DJILBAirLink.DJIOnReceivedVideoCallback;
 import dji.sdk.Battery.DJIBattery;
@@ -30,7 +31,9 @@ import dji.sdk.Camera.DJICamera;
 import dji.sdk.Camera.DJICamera.CameraReceivedVideoDataCallback;
 import dji.sdk.Codec.DJICodecManager;
 import dji.sdk.FlightController.DJIFlightController;
+import dji.sdk.FlightController.DJIFlightControllerDataType;
 import dji.sdk.FlightController.DJIFlightControllerDataType.DJIFlightControllerCurrentState;
+import dji.sdk.FlightController.DJIFlightControllerDelegate;
 import dji.sdk.FlightController.DJIFlightControllerDelegate.FlightControllerReceivedDataFromExternalDeviceCallback;
 import dji.sdk.base.DJIBaseComponent.DJICompletionCallback;
 import dji.sdk.base.DJIBaseProduct;
@@ -123,7 +126,7 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
     private DrawView drawView;
     private TextView textView;
     private EditText sendText;
-    private TextView GPSInfo;
+    private TextView GPSInfo, velInfo;
     private TextView heightText;
     private TextView batteryText;
     private TextureView videoSurface;
@@ -133,7 +136,14 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
         @Override
         public void run() {
             if (flightController != null) {
-                heightText.setText(String.valueOf(flightController.getCurrentState().getUltrasonicHeight()));
+                DJIFlightControllerCurrentState state = flightController.getCurrentState();
+                heightText.setText(String.valueOf(state.getAircraftLocation().getAltitude()));
+                double x = state.getVelocityX();
+                double y = state.getVelocityY();
+                double velocity = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+                BigDecimal bigDecimal = new BigDecimal(velocity);
+                velocity = bigDecimal.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
+                velInfo.setText(String.valueOf(velocity));
             } else {
                 heightText.setText(getString(R.string.not_available));
             }
@@ -153,6 +163,7 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
         drawView = (DrawView) findViewById(R.id.drawView);
         textView = (TextView) findViewById(R.id.stateView);
         GPSInfo = (TextView) findViewById(R.id.GPSInfo);
+        velInfo = (TextView) findViewById(R.id.velInfo);
         heightText = (TextView) findViewById(R.id.heightView);
         batteryText = (TextView) findViewById(R.id.batteryView);
         videoSurface = (TextureView) findViewById(R.id.textureView);
