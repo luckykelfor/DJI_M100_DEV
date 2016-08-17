@@ -5,12 +5,11 @@
     <string name="disconnected">Disconnected</string>
 
     <!-- button -->
-    <string name="initialize">初始化</string>
-    <string name="turnon_motor">打开电机</string>
+    <string name="initialize">INITIALIZE</string>
     <string name="take_off">起飞</string>
     <string name="land">降落</string>
-    <string name="start_mission">开始任务</string>
-    <string name="end_mission">结束任务</string>
+    <string name="start_mission">START MISSION</string>
+    <string name="stop_mission">STOP MISSION</string>
     <!-- button end -->
 
     <string name="get_fc_success">获取fc成功</string>
@@ -18,8 +17,18 @@
     <string name="onboard_device_unavailable">未找到 Onboard 设备</string>
     <string name="not_flying">飞机未起飞</string>
 
-    <string name="receive_area">Receive Area</string>
+    <string name="live_view">LIVE VIEW</string>>
+    <string name="pre_detections">PRE DETECTIONS</string>
+    <string name="history">HISTORY</string>
+    <string name="mission_not_start">MISSION NOT START</string>
+
+    <string name="server_ip">SERVER IP</string>>
+    <string name="history_id">ID</string>
+    <string name="history_lat">Lat</string>
+    <string name="history_long">Long</string>
+    <string name="hold_pre_image">hold pre-detected image</string>
+
+    <string name="velocity">velocity</string>
     <string name="not_available">Not available</string>
     <string name="NA">N/A</string>
-    <string name="gps">GPS</string>
 </resources>

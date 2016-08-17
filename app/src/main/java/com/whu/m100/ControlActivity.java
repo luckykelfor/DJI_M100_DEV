@@ -5,9 +5,11 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Bitmap;
 import android.graphics.SurfaceTexture;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Message;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -16,13 +18,23 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.TextureView.SurfaceTextureListener;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ford.DJIL;
+import com.ford.DJILListener;
+
 import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import dji.sdk.AirLink.DJILBAirLink.DJIOnReceivedVideoCallback;
 import dji.sdk.Battery.DJIBattery;
@@ -31,9 +43,7 @@ import dji.sdk.Camera.DJICamera;
 import dji.sdk.Camera.DJICamera.CameraReceivedVideoDataCallback;
 import dji.sdk.Codec.DJICodecManager;
 import dji.sdk.FlightController.DJIFlightController;
-import dji.sdk.FlightController.DJIFlightControllerDataType;
 import dji.sdk.FlightController.DJIFlightControllerDataType.DJIFlightControllerCurrentState;
-import dji.sdk.FlightController.DJIFlightControllerDelegate;
 import dji.sdk.FlightController.DJIFlightControllerDelegate.FlightControllerReceivedDataFromExternalDeviceCallback;
 import dji.sdk.base.DJIBaseComponent.DJICompletionCallback;
 import dji.sdk.base.DJIBaseProduct;
@@ -47,7 +57,10 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
     private final String START = "q";
     private final String END = "d";
     private final String TAG = ControlActivity.class.getName();
+    private final String TEAM_NAME = "SHIJIU TEAM";
 
+    /* DJI variable */
+    private DJIL djil = null;
     private DJICamera camera = null;
     private DJIBattery battery = null;
     private DJIBaseProduct product = null;
@@ -56,6 +69,7 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
     private DJIOnReceivedVideoCallback onReceiveVideoCallback = null;
     private CameraReceivedVideoDataCallback receivedVideoDataCallBack = null;
 
+    /* callback */
     private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -87,7 +101,7 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
                         String ssid = new String(bytes, 24, 3, "ascii");
                         String longitude = new String(bytes, 27, 8, "ascii");
                         String latitude = new String(bytes, 35, 7, "ascii");
-                        GPSInfo.setText(longitude + ',' + latitude);
+
                         int lux = (int) (Integer.valueOf(slux) * scale);
                         int luy = (int) (Integer.valueOf(sluy) * scale);
                         int rux = (int) (Integer.valueOf(srux) * scale);
@@ -96,7 +110,24 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
                         int ldy = (int) (Integer.valueOf(sldy) * scale);
                         int rdx = (int) (Integer.valueOf(srdx) * scale);
                         int rdy = (int) (Integer.valueOf(srdy) * scale);
-                        int id = (int) (Integer.valueOf(ssid));
+                        int id = Integer.valueOf(ssid);
+
+                        if (!map.containsKey(id)) {
+                            historyAdapter.add(new AprilTag(ssid, latitude, longitude));
+                            historyAdapter.setSelectItem(historyAdapter.getCount() - 1);
+                            listView.setSelection(historyAdapter.getCount() - 1);
+                            map.put(id, 1);
+
+                            new Thread() {
+                                @Override
+                                public void run() {
+                                    Message msg = new Message();
+                                    msg.what = 0;
+                                    handler.sendMessage(msg);
+                                }
+                            }.start();
+                        }
+
                         drawView.setXY(lux, luy, rux, ruy, ldx, ldy, rdx, rdy, id);
                         drawView.invalidate();
                     } catch (UnsupportedEncodingException e) {
@@ -123,15 +154,41 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
         }
     };
 
+    /* widget */
+    private EditText server;
+    private ListView listView;
     private DrawView drawView;
     private TextView textView;
-    private EditText sendText;
-    private TextView GPSInfo, velInfo;
+    private TextView velInfo;
     private TextView heightText;
     private TextView batteryText;
+    private ImageView preImageView;
     private TextureView videoSurface;
 
-    private Handler handler = new Handler();
+    /* data for listview */
+    private Map<Integer, Integer> map;
+    private List<Bitmap> detectedImagesList;
+    private HistoryAdapter historyAdapter;
+
+    private Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case 0:
+                    historyAdapter.notifyDataSetChanged();
+                    Bitmap tag = videoSurface.getBitmap();
+                    preImageView.setImageBitmap(tag);
+                    detectedImagesList.add(tag);
+                    break;
+                case 1:
+                    int position = (int) msg.obj;
+                    historyAdapter.setSelectItem(position);
+                    historyAdapter.notifyDataSetChanged();
+                    preImageView.setImageBitmap(detectedImagesList.get(position));
+                    break;
+            }
+        }
+    };
     private Runnable runnable = new Runnable() {
         @Override
         public void run() {
@@ -156,17 +213,28 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_control);
 
-        // final int WIDTH = 1280;
-        // final int HEIGHT = 720;
+        initAll();
 
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(ControlApplication.FLAG_CONNECTION_CHANGE);
+        registerReceiver(broadcastReceiver, filter);
+
+        // start refresh height
+        handler.postDelayed(runnable, DELAY_TIME);
+    }
+
+    private void initAll() {
         // get all widget
+        server = (EditText) findViewById(R.id.server_ip);
+        listView = (ListView) findViewById(R.id.historyList);
         drawView = (DrawView) findViewById(R.id.drawView);
         textView = (TextView) findViewById(R.id.stateView);
-        GPSInfo = (TextView) findViewById(R.id.GPSInfo);
         velInfo = (TextView) findViewById(R.id.velInfo);
         heightText = (TextView) findViewById(R.id.heightView);
         batteryText = (TextView) findViewById(R.id.batteryView);
+        preImageView = (ImageView) findViewById(R.id.pre_tag);
         videoSurface = (TextureView) findViewById(R.id.textureView);
+
         Button initButton = (Button) findViewById(R.id.button1);
         Button startButton = (Button) findViewById(R.id.button2);
         Button landButton = (Button) findViewById(R.id.button3);
@@ -176,17 +244,19 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
         landButton.setOnClickListener(this);
         endButton.setOnClickListener(this);
 
-        // set video surface
+        /* set resolution */
         DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         ViewGroup.LayoutParams params = videoSurface.getLayoutParams();
-        params.width = displayMetrics.widthPixels;
-        params.height = displayMetrics.heightPixels;
+        params.width = displayMetrics.widthPixels / 2;
+        params.height = displayMetrics.heightPixels / 2;
         scale = (double) params.width / 640;
         videoSurface.setLayoutParams(params);
+
+        /* set video surface */
         videoSurface.setSurfaceTextureListener(this);
 
-        // receive video callback
+        /* receive video callback */
         onReceiveVideoCallback = new DJIOnReceivedVideoCallback() {
             @Override
             public void onResult(byte[] videoBuffer, int size) {
@@ -200,13 +270,37 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
             }
         };
 
-        IntentFilter filter = new IntentFilter();
-        filter.addAction(ControlApplication.FLAG_CONNECTION_CHANGE);
-        registerReceiver(broadcastReceiver, filter);
+        // init listview
+        map = new HashMap<>();
+        detectedImagesList = new ArrayList<>();
+        historyAdapter = new HistoryAdapter(this);
+        listView.setAdapter(historyAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Message msg = new Message();
+                msg.what = 1;
+                msg.obj = position;
+                handler.sendMessage(msg);
+            }
+        });
 
-        // start refresh height
-        handler.postDelayed(runnable, DELAY_TIME);
+        /* init ford api */
+        djil = new DJIL(new DJILListener() {
+            @Override
+            public void startButton() {
+                startMission();
+            }
 
+            @Override
+            public void abortLanding() {
+                stopMission();
+            }
+
+            @Override
+            public void abortMission() {
+            }
+        });
     }
 
     public void showToast(final String msg) {
@@ -260,7 +354,8 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
         }
     }
 
-    private void getFc() {
+    private void initialize() {
+        /* get flight controller */
         try {
             flightController = ControlApplication.getAircraftInstance().getFlightController();
             flightController.setReceiveExternalDeviceDataCallback(recvCallback);
@@ -268,14 +363,18 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
         } catch (NullPointerException e) {
             showToast(getString(R.string.fc_null));
         }
-    }
 
-    private void turnOnMotor() {
-        if (flightController != null) {
-            flightController.turnOnMotors(djiCompletionCallback);
-        } else {
-            showToast(getString(R.string.fc_null));
-        }
+        /* connect to ford server */
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    String ip = server.getText().toString().trim();
+                    djil.connect(ip, TEAM_NAME);
+                } catch (Exception e) {
+                }
+            }
+        }).start();
     }
 
     private void takeOff() {
@@ -318,11 +417,11 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
         }
     }
 
-    private void endMission() {
+    private void stopMission() {
         if (flightController != null) {
             if (flightController.isOnboardSDKDeviceAvailable()) {
                 flightController.sendDataToOnboardSDKDevice(END.getBytes(), djiCompletionCallback);
-                showToast(getString(R.string.end_mission));
+                showToast(getString(R.string.stop_mission));
             } else {
                 showToast(getString(R.string.onboard_device_unavailable));
             }
@@ -347,7 +446,7 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
 
         switch (v.getId()) {
             case R.id.button1:
-                getFc();
+                initialize();
                 break;
             case R.id.button2:
                 startMission();
@@ -356,7 +455,7 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
                 land();
                 break;
             case R.id.button4:
-                endMission();
+                stopMission();
                 break;
             default:
                 break;
@@ -394,24 +493,29 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
     }
 
     @Override
-    public void onResume() {
+    protected void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    protected void onResume() {
         super.onResume();
         // updateTitleBar();
         initPreviewer();
     }
 
     @Override
-    public void onPause() {
+    protected void onPause() {
         uninitPreviewer();
         super.onPause();
     }
 
     @Override
-    public void onStop() {
+    protected void onStop() {
         super.onStop();
     }
 
-    public void onReturn(View view) {
+    protected void onReturn(View view) {
         this.finish();
     }
 
