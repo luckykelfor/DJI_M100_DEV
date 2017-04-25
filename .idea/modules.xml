@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DJISDKLIB/DJISDKLIB.iml" filepath="$PROJECT_DIR$/DJISDKLIB/DJISDKLIB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DJI_M100_DEV.iml" filepath="$PROJECT_DIR$/DJI_M100_DEV.iml" />
       <module fileurl="file://$PROJECT_DIR$/M100.iml" filepath="$PROJECT_DIR$/M100.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

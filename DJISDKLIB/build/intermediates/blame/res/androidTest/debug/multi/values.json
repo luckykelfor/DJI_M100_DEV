@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\values\\values.xml",
+        "outputFile": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 105
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -23,358 +23,104 @@
             },
             {
                 "to": {
-                    "startLine": 5,
-                    "startColumn": 4,
-                    "startOffset": 481,
-                    "endColumn": 48,
-                    "endOffset": 525
-                },
-                "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 481,
-                        "endColumn": 48,
-                        "endOffset": 525
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 6,
-                    "startColumn": 4,
-                    "startOffset": 530,
-                    "endLine": 12,
-                    "endColumn": 12,
-                    "endOffset": 816
-                },
-                "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 530,
-                        "endLine": 12,
-                        "endColumn": 12,
-                        "endOffset": 816
-                    }
-                }
-            },
-            {
-                "to": {
                     "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 821,
-                    "endLine": 15,
-                    "endColumn": 12,
-                    "endOffset": 976
+                    "startOffset": 577,
+                    "endColumn": 48,
+                    "endOffset": 621
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
-                        "startOffset": 821,
-                        "endLine": 15,
-                        "endColumn": 12,
-                        "endOffset": 976
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 16,
-                    "startColumn": 4,
-                    "startOffset": 981,
-                    "endLine": 18,
-                    "endColumn": 12,
-                    "endOffset": 1105
-                },
-                "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 16,
-                        "startColumn": 4,
-                        "startOffset": 981,
-                        "endLine": 18,
-                        "endColumn": 12,
-                        "endOffset": 1105
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 19,
-                    "startColumn": 4,
-                    "startOffset": 1110,
-                    "endLine": 26,
-                    "endColumn": 12,
-                    "endOffset": 1550
-                },
-                "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 19,
-                        "startColumn": 4,
-                        "startOffset": 1110,
-                        "endLine": 26,
-                        "endColumn": 12,
-                        "endOffset": 1550
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\values\\values.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 54,
-                    "endOffset": 105
-                },
-                "from": {
-                    "file": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endColumn": 54,
-                        "endOffset": 105
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 5,
-                    "startColumn": 4,
-                    "startOffset": 481,
-                    "endColumn": 48,
-                    "endOffset": 525
-                },
-                "from": {
-                    "file": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 481,
+                        "startOffset": 577,
                         "endColumn": 48,
-                        "endOffset": 525
+                        "endOffset": 621
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 6,
+                    "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 530,
-                    "endLine": 12,
+                    "startOffset": 626,
+                    "endLine": 20,
                     "endColumn": 12,
-                    "endOffset": 816
+                    "endOffset": 912
                 },
                 "from": {
-                    "file": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
-                        "startLine": 6,
+                        "startLine": 14,
                         "startColumn": 4,
-                        "startOffset": 530,
-                        "endLine": 12,
+                        "startOffset": 626,
+                        "endLine": 20,
                         "endColumn": 12,
-                        "endOffset": 816
+                        "endOffset": 912
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 13,
+                    "startLine": 21,
                     "startColumn": 4,
-                    "startOffset": 821,
-                    "endLine": 15,
+                    "startOffset": 917,
+                    "endLine": 23,
                     "endColumn": 12,
-                    "endOffset": 976
+                    "endOffset": 1072
                 },
                 "from": {
-                    "file": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
-                        "startLine": 13,
+                        "startLine": 21,
                         "startColumn": 4,
-                        "startOffset": 821,
-                        "endLine": 15,
+                        "startOffset": 917,
+                        "endLine": 23,
                         "endColumn": 12,
-                        "endOffset": 976
+                        "endOffset": 1072
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 16,
+                    "startLine": 24,
                     "startColumn": 4,
-                    "startOffset": 981,
-                    "endLine": 18,
-                    "endColumn": 12,
-                    "endOffset": 1105
-                },
-                "from": {
-                    "file": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 16,
-                        "startColumn": 4,
-                        "startOffset": 981,
-                        "endLine": 18,
-                        "endColumn": 12,
-                        "endOffset": 1105
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 19,
-                    "startColumn": 4,
-                    "startOffset": 1110,
+                    "startOffset": 1077,
                     "endLine": 26,
                     "endColumn": 12,
-                    "endOffset": 1550
+                    "endOffset": 1201
                 },
                 "from": {
-                    "file": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
-                        "startLine": 19,
+                        "startLine": 24,
                         "startColumn": 4,
-                        "startOffset": 1110,
+                        "startOffset": 1077,
                         "endLine": 26,
                         "endColumn": 12,
-                        "endOffset": 1550
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\values\\values.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 54,
-                    "endOffset": 105
-                },
-                "from": {
-                    "file": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endColumn": 54,
-                        "endOffset": 105
+                        "endOffset": 1201
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 5,
+                    "startLine": 27,
                     "startColumn": 4,
-                    "startOffset": 481,
-                    "endColumn": 48,
-                    "endOffset": 525
-                },
-                "from": {
-                    "file": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 481,
-                        "endColumn": 48,
-                        "endOffset": 525
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 6,
-                    "startColumn": 4,
-                    "startOffset": 530,
-                    "endLine": 12,
+                    "startOffset": 1206,
+                    "endLine": 34,
                     "endColumn": 12,
-                    "endOffset": 816
+                    "endOffset": 1646
                 },
                 "from": {
-                    "file": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
-                        "startLine": 6,
+                        "startLine": 27,
                         "startColumn": 4,
-                        "startOffset": 530,
-                        "endLine": 12,
+                        "startOffset": 1206,
+                        "endLine": 34,
                         "endColumn": 12,
-                        "endOffset": 816
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 13,
-                    "startColumn": 4,
-                    "startOffset": 821,
-                    "endLine": 15,
-                    "endColumn": 12,
-                    "endOffset": 976
-                },
-                "from": {
-                    "file": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 13,
-                        "startColumn": 4,
-                        "startOffset": 821,
-                        "endLine": 15,
-                        "endColumn": 12,
-                        "endOffset": 976
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 16,
-                    "startColumn": 4,
-                    "startOffset": 981,
-                    "endLine": 18,
-                    "endColumn": 12,
-                    "endOffset": 1105
-                },
-                "from": {
-                    "file": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 16,
-                        "startColumn": 4,
-                        "startOffset": 981,
-                        "endLine": 18,
-                        "endColumn": 12,
-                        "endOffset": 1105
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 19,
-                    "startColumn": 4,
-                    "startOffset": 1110,
-                    "endLine": 26,
-                    "endColumn": 12,
-                    "endOffset": 1550
-                },
-                "from": {
-                    "file": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 19,
-                        "startColumn": 4,
-                        "startOffset": 1110,
-                        "endLine": 26,
-                        "endColumn": 12,
-                        "endOffset": 1550
+                        "endOffset": 1646
                     }
                 }
             }

@@ -20,17 +20,17 @@ int drawable btn_radio_selector 0x7f020001
 int drawable btn_zoom_selector 0x7f020002
 int drawable radio_checked 0x7f020003
 int drawable radio_unchecked 0x7f020004
-int id bold 0x7f080005
-int id demi 0x7f080002
-int id log_dlg_content 0x7f080009
-int id log_dlg_control 0x7f080006
-int id log_dlg_lock 0x7f080007
-int id log_dlg_rg 0x7f08000a
-int id log_dlg_scroll 0x7f080008
-int id nbold 0x7f080004
-int id nlight 0x7f080003
-int id pad 0x7f080001
-int id phone 0x7f080000
+int id bold 0x7f0a0002
+int id demi 0x7f0a0003
+int id log_dlg_content 0x7f0a0009
+int id log_dlg_control 0x7f0a0006
+int id log_dlg_lock 0x7f0a0007
+int id log_dlg_rg 0x7f0a000a
+int id log_dlg_scroll 0x7f0a0008
+int id nbold 0x7f0a0004
+int id nlight 0x7f0a0005
+int id pad 0x7f0a0000
+int id phone 0x7f0a0001
 int layout log_dialog_view 0x7f030000
 int raw dock 0x7f060000
 int raw effect_tick 0x7f060001
@@ -45,11 +45,11 @@ int raw iframe_640x480 0x7f060009
 int raw iframe_848x480 0x7f06000a
 int raw iframe_960_3s 0x7f06000b
 int raw iframe_960x720_3s 0x7f06000c
-int string app_name 0x7f090000
-int style AppBaseTheme 0x7f0a0000
-int style AppTheme 0x7f0a0001
-int style DialogTheme 0x7f0a0002
-int style LogDialog 0x7f0a0003
+int string app_name 0x7f080000
+int style AppBaseTheme 0x7f090000
+int style AppTheme 0x7f090001
+int style DialogTheme 0x7f090002
+int style LogDialog 0x7f090003
 int[] styleable DJIDeviceType { 0x7f010000 }
 int styleable DJIDeviceType_djiDeviceType 0
 int[] styleable DJITextView { 0x7f010001 }

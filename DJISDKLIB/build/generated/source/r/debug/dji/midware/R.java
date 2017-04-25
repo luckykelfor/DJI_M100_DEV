@@ -61,17 +61,17 @@ public final class R {
         public static int radio_unchecked=0x7f020004;
     }
     public static final class id {
-        public static int bold=0x7f080005;
-        public static int demi=0x7f080002;
-        public static int log_dlg_content=0x7f080009;
-        public static int log_dlg_control=0x7f080006;
-        public static int log_dlg_lock=0x7f080007;
-        public static int log_dlg_rg=0x7f08000a;
-        public static int log_dlg_scroll=0x7f080008;
-        public static int nbold=0x7f080004;
-        public static int nlight=0x7f080003;
-        public static int pad=0x7f080001;
-        public static int phone=0x7f080000;
+        public static int bold=0x7f0a0002;
+        public static int demi=0x7f0a0003;
+        public static int log_dlg_content=0x7f0a0009;
+        public static int log_dlg_control=0x7f0a0006;
+        public static int log_dlg_lock=0x7f0a0007;
+        public static int log_dlg_rg=0x7f0a000a;
+        public static int log_dlg_scroll=0x7f0a0008;
+        public static int nbold=0x7f0a0004;
+        public static int nlight=0x7f0a0005;
+        public static int pad=0x7f0a0000;
+        public static int phone=0x7f0a0001;
     }
     public static final class layout {
         public static int log_dialog_view=0x7f030000;
@@ -92,7 +92,7 @@ public final class R {
         public static int iframe_960x720_3s=0x7f06000c;
     }
     public static final class string {
-        public static int app_name=0x7f090000;
+        public static int app_name=0x7f080000;
     }
     public static final class style {
         /** 
@@ -101,12 +101,12 @@ public final class R {
             backward-compatibility can go here.
         
          */
-        public static int AppBaseTheme=0x7f0a0000;
+        public static int AppBaseTheme=0x7f090000;
         /**  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static int AppTheme=0x7f0a0001;
-        public static int DialogTheme=0x7f0a0002;
-        public static int LogDialog=0x7f0a0003;
+        public static int AppTheme=0x7f090001;
+        public static int DialogTheme=0x7f090002;
+        public static int LogDialog=0x7f090003;
     }
     public static final class xml {
         public static int accessory_filter=0x7f050000;
@@ -141,7 +141,7 @@ public final class R {
 </table>
           @attr name dji.midware:djiDeviceType
         */
-        public static final int DJIDeviceType_djiDeviceType = 0;
+        public static int DJIDeviceType_djiDeviceType = 0;
         /** Attributes that can be used with a DJITextView.
            <p>Includes the following attributes:</p>
            <table>
@@ -173,6 +173,6 @@ public final class R {
 </table>
           @attr name dji.midware:djiTextFace
         */
-        public static final int DJITextView_djiTextFace = 0;
+        public static int DJITextView_djiTextFace = 0;
     };
 }

@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="D:\Myworkspace\2016DJIChallenge\M100\DJISDKLIB\src\main\assets"/></dataSet><dataSet config="debug"><source path="D:\Myworkspace\2016DJIChallenge\M100\DJISDKLIB\src\debug\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="D:\MyWorkspace\Android_Projects\DJI_M100_DEV\DJISDKLIB\src\main\assets"/><source path="D:\MyWorkspace\Android_Projects\DJI_M100_DEV\DJISDKLIB\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="D:\MyWorkspace\Android_Projects\DJI_M100_DEV\DJISDKLIB\src\debug\assets"/></dataSet></merger>

@@ -1,62 +1,22 @@
 [
     {
-        "merged": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\btn_zoom_selector.xml",
-        "source": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\drawable\\btn_zoom_selector.xml"
+        "merged": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\btn_zoom_selector.xml",
+        "source": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\drawable\\btn_zoom_selector.xml"
     },
     {
-        "merged": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\btn_radio_selector.xml",
-        "source": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\drawable\\btn_radio_selector.xml"
+        "merged": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\radio_checked.png",
+        "source": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\drawable\\radio_checked.png"
     },
     {
-        "merged": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\btn_radio_selector.xml",
-        "source": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\drawable\\btn_radio_selector.xml"
+        "merged": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\btn_lock_selector.xml",
+        "source": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\drawable\\btn_lock_selector.xml"
     },
     {
-        "merged": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\btn_lock_selector.xml",
-        "source": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\drawable\\btn_lock_selector.xml"
+        "merged": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\radio_unchecked.png",
+        "source": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\drawable\\radio_unchecked.png"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\btn_lock_selector.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\drawable\\btn_lock_selector.xml"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\btn_zoom_selector.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\drawable\\btn_zoom_selector.xml"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\radio_unchecked.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\drawable\\radio_unchecked.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\btn_radio_selector.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\drawable\\btn_radio_selector.xml"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\radio_checked.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\drawable\\radio_checked.png"
-    },
-    {
-        "merged": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\radio_unchecked.png",
-        "source": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\drawable\\radio_unchecked.png"
-    },
-    {
-        "merged": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\btn_zoom_selector.xml",
-        "source": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\drawable\\btn_zoom_selector.xml"
-    },
-    {
-        "merged": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\radio_checked.png",
-        "source": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\drawable\\radio_checked.png"
-    },
-    {
-        "merged": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\radio_checked.png",
-        "source": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\drawable\\radio_checked.png"
-    },
-    {
-        "merged": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\btn_lock_selector.xml",
-        "source": "D:\\Myworkspace\\2016DJIChallenge\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\drawable\\btn_lock_selector.xml"
-    },
-    {
-        "merged": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\radio_unchecked.png",
-        "source": "E:\\MyProjects\\Android\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\drawable\\radio_unchecked.png"
+        "merged": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\btn_radio_selector.xml",
+        "source": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\drawable\\btn_radio_selector.xml"
     }
 ]
