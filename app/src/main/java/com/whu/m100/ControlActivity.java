@@ -26,7 +26,25 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.ford.DJIL;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.net.Socket;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Button;
+import android.widget.TextView;
+
+
 import com.ford.DJILListener;
 
 import java.io.UnsupportedEncodingException;
@@ -60,7 +78,7 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
     private final String TEAM_NAME = "SHIJIU TEAM";
 
     /* DJI variable */
-    private DJIL djil = null;
+
     private DJICamera camera = null;
     private DJIBattery battery = null;
     private DJIBaseProduct product = null;
@@ -69,6 +87,15 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
     private DJIOnReceivedVideoCallback onReceiveVideoCallback = null;
     private CameraReceivedVideoDataCallback receivedVideoDataCallBack = null;
 
+
+    /*TCP Socket variables*/
+//    private EditText show;
+    private PrintWriter out;
+    private BufferedReader br;
+//    Button btnSend;
+    Socket socket=null;
+//    private TextView textView = null;
+//    private Handler handler = null;
     /* callback */
     private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
         @Override
@@ -111,22 +138,28 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
                         int rdx = (int) (Integer.valueOf(srdx) * scale);
                         int rdy = (int) (Integer.valueOf(srdy) * scale);
                         int id = Integer.valueOf(ssid);
+                        //TODO:发送到Qt服务器端坐标
+                        String msg = bytes.toString();//show.getText().toString();
+                        out.print(msg);
+                        out.flush();//Very Important!
 
-                        if (!map.containsKey(id)) {
-                            historyAdapter.add(new AprilTag(ssid, latitude, longitude));
-                            historyAdapter.setSelectItem(historyAdapter.getCount() - 1);
-                            listView.setSelection(historyAdapter.getCount() - 1);
-                            map.put(id, 1);
 
-                            new Thread() {
-                                @Override
-                                public void run() {
-                                    Message msg = new Message();
-                                    msg.what = 0;
-                                    handler.sendMessage(msg);
-                                }
-                            }.start();
-                        }
+//
+//                        if (!map.containsKey(id)) {
+//                            historyAdapter.add(new AprilTag(ssid, latitude, longitude));
+//                            historyAdapter.setSelectItem(historyAdapter.getCount() - 1);
+//                            listView.setSelection(historyAdapter.getCount() - 1);
+//                            map.put(id, 1);
+//
+//                            new Thread() {
+//                                @Override
+//                                public void run() {
+//                                    Message msg = new Message();
+//                                    msg.what = 0;
+//                                    handler.sendMessage(msg);
+//                                }
+//                            }.start();
+//                        }
 
                         drawView.setXY(lux, luy, rux, ruy, ldx, ldy, rdx, rdy, id);
                         drawView.invalidate();
@@ -153,6 +186,7 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
             }
         }
     };
+
 
     /* widget */
     private EditText server;
@@ -186,6 +220,34 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
                     historyAdapter.notifyDataSetChanged();
                     preImageView.setImageBitmap(detectedImagesList.get(position));
                     break;
+                case 0x88:
+                    //TODO: 添加处理Qt 服务器端回传的数据
+                    break;
+            }
+        }
+    };
+    private Thread tcpThread = new Thread()
+    {
+        @Override
+        public void run()
+        {
+
+
+            while (true) {
+                String str = null;
+                try {
+                    str = br.readLine();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                if(str!=null)
+                {
+                    Message msg = new Message();
+                    msg.obj  = str;
+                    msg.what = 0x88;
+                    handler.sendMessage(msg);
+
+                }
             }
         }
     };
@@ -207,6 +269,7 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
             handler.postDelayed(this, DELAY_TIME);
         }
     };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -271,36 +334,36 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
         };
 
         // init listview
-        map = new HashMap<>();
-        detectedImagesList = new ArrayList<>();
-        historyAdapter = new HistoryAdapter(this);
-        listView.setAdapter(historyAdapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Message msg = new Message();
-                msg.what = 1;
-                msg.obj = position;
-                handler.sendMessage(msg);
-            }
-        });
-
-        /* init ford api */
-        djil = new DJIL(new DJILListener() {
-            @Override
-            public void startButton() {
-                startMission();
-            }
-
-            @Override
-            public void abortLanding() {
-                stopMission();
-            }
-
-            @Override
-            public void abortMission() {
-            }
-        });
+//        map = new HashMap<>();
+//        detectedImagesList = new ArrayList<>();
+//        historyAdapter = new HistoryAdapter(this);
+//        listView.setAdapter(historyAdapter);
+//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                Message msg = new Message();
+//                msg.what = 1;
+//                msg.obj = position;
+//                handler.sendMessage(msg);
+//            }
+//        });
+//
+//        /* init ford api */
+//        djil = new DJIL(new DJILListener() {
+//            @Override
+//            public void startButton() {
+//                startMission();
+//            }
+//
+//            @Override
+//            public void abortLanding() {
+//                stopMission();
+//            }
+//
+//            @Override
+//            public void abortMission() {
+//            }
+//        });
     }
 
     public void showToast(final String msg) {
@@ -364,13 +427,19 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
             showToast(getString(R.string.fc_null));
         }
 
-        /* connect to ford server */
+//        /* connect to Qt server */
         new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
                     String ip = server.getText().toString().trim();
-                    djil.connect(ip, TEAM_NAME);
+
+                    socket = new Socket(ip,9527);
+                    out = new PrintWriter( socket.getOutputStream());
+                    //将Socket对应的输入流包装成BufferedReader
+                    br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                    tcpThread.start();
+
                 } catch (Exception e) {
                 }
             }

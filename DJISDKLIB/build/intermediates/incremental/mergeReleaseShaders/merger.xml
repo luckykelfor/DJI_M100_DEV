@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="D:\MyWorkspace\Android_Projects\DJI_M100_DEV\DJISDKLIB\src\main\shaders"/></dataSet><dataSet config="release"><source path="D:\MyWorkspace\Android_Projects\DJI_M100_DEV\DJISDKLIB\src\release\shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="D:\FastWorkspace\AndroidProjects\M100\DJISDKLIB\src\main\shaders"/></dataSet><dataSet config="release"><source path="D:\FastWorkspace\AndroidProjects\M100\DJISDKLIB\src\release\shaders"/></dataSet></merger>

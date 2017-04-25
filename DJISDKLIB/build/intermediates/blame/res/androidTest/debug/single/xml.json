@@ -1,5 +1,9 @@
 [
     {
+        "merged": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\accessory_filter.xml",
+        "source": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\xml\\accessory_filter.xml"
+    },
+    {
         "merged": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\accessory_filter.xml",
         "source": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\xml\\accessory_filter.xml"
     }

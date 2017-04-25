@@ -1,27 +1,83 @@
 [
     {
-        "merged": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_1280_ins.h264",
-        "source": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_1280_ins.h264"
-    },
-    {
         "merged": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\flyc_param_infos",
         "source": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\flyc_param_infos"
     },
     {
-        "merged": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_1280_3s.h264",
-        "source": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_1280_3s.h264"
+        "merged": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_1280_ins.h264",
+        "source": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_1280_ins.h264"
+    },
+    {
+        "merged": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\effect_tick.ogg",
+        "source": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\effect_tick.ogg"
+    },
+    {
+        "merged": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\gimbal_param_infos",
+        "source": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\gimbal_param_infos"
+    },
+    {
+        "merged": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_960_3s.h264",
+        "source": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_960_3s.h264"
     },
     {
         "merged": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\effect_tick.ogg",
         "source": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\effect_tick.ogg"
     },
     {
-        "merged": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\dock.ogg",
-        "source": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\dock.ogg"
+        "merged": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\flyc_param_infos",
+        "source": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\flyc_param_infos"
+    },
+    {
+        "merged": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_1280x720_p4.h264",
+        "source": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_1280x720_p4.h264"
+    },
+    {
+        "merged": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_960x720_3s.h264",
+        "source": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_960x720_3s.h264"
     },
     {
         "merged": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\gimbal_param_infos",
         "source": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\gimbal_param_infos"
+    },
+    {
+        "merged": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_1280x720_ins.h264",
+        "source": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_1280x720_ins.h264"
+    },
+    {
+        "merged": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\dock.ogg",
+        "source": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\dock.ogg"
+    },
+    {
+        "merged": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_1280x720_p4.h264",
+        "source": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_1280x720_p4.h264"
+    },
+    {
+        "merged": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_848x480.h264",
+        "source": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_848x480.h264"
+    },
+    {
+        "merged": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_1280_ins.h264",
+        "source": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_1280_ins.h264"
+    },
+    {
+        "merged": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_1280_3s.h264",
+        "source": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_1280_3s.h264"
+    },
+    {
+        "merged": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_640x480.h264",
+        "source": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_640x480.h264"
+    },
+    {
+        "merged": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\dock.ogg",
+        "source": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\dock.ogg"
+    },
+    {
+        "merged": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_1280_3s.h264",
+        "source": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_1280_3s.h264"
+    },
+    {
+        "merged": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_1280x720_3s.h264",
+        "source": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_1280x720_3s.h264"
     },
     {
         "merged": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_960_3s.h264",
@@ -32,8 +88,8 @@
         "source": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_960x720_3s.h264"
     },
     {
-        "merged": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_1280x720_ins.h264",
-        "source": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_1280x720_ins.h264"
+        "merged": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_1280x720_ins.h264",
+        "source": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_1280x720_ins.h264"
     },
     {
         "merged": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_848x480.h264",
@@ -42,10 +98,6 @@
     {
         "merged": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_640x480.h264",
         "source": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_640x480.h264"
-    },
-    {
-        "merged": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_1280x720_p4.h264",
-        "source": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\raw\\iframe_1280x720_p4.h264"
     },
     {
         "merged": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\iframe_1280x720_3s.h264",
