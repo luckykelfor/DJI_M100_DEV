@@ -18,6 +18,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.TextureView.SurfaceTextureListener;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
+import android.widget.ToggleButton;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -68,12 +70,15 @@ import dji.sdk.base.DJIBaseProduct;
 import dji.sdk.base.DJIBaseProduct.Model;
 import dji.sdk.base.DJIError;
 
-public class ControlActivity extends Activity implements SurfaceTextureListener, OnClickListener {
+public class ControlActivity extends Activity implements SurfaceTextureListener, OnClickListener,CompoundButton.OnCheckedChangeListener {
 
     private double scale;
     private final int DELAY_TIME = 200;
     private final String START = "q";
     private final String END = "d";
+    private final String STARTRECORD = "r";
+    private final String STOPRECORD = "t";
+    private final String ABORT= "a";
     private final String TAG = ControlActivity.class.getName();
     private final String TEAM_NAME = "SHIJIU TEAM";
 
@@ -90,10 +95,12 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
 
     /*TCP Socket variables*/
 //    private EditText show;
-    private PrintWriter out;
+    private PrintWriter out_coord;
+    private PrintWriter out_cmd;
     private BufferedReader br;
 //    Button btnSend;
-    Socket socket=null;
+    Socket socket_coordTrans=null;
+    Socket socket_cmd = null;
 //    private TextView textView = null;
 //    private Handler handler = null;
     /* callback */
@@ -140,8 +147,8 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
                         int id = Integer.valueOf(ssid);
                         //TODO:发送到Qt服务器端坐标
                         String msg = bytes.toString();//show.getText().toString();
-                        out.print(msg);
-                        out.flush();//Very Important!
+                        out_coord.print(msg);
+                        out_coord.flush();//Very Important!
 
 
 //
@@ -289,7 +296,7 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
     private void initAll() {
         // get all widget
         server = (EditText) findViewById(R.id.server_ip);
-        listView = (ListView) findViewById(R.id.historyList);
+//        listView = (ListView) findViewById(R.id.historyList);
         drawView = (DrawView) findViewById(R.id.drawView);
         textView = (TextView) findViewById(R.id.stateView);
         velInfo = (TextView) findViewById(R.id.velInfo);
@@ -298,14 +305,18 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
         preImageView = (ImageView) findViewById(R.id.pre_tag);
         videoSurface = (TextureView) findViewById(R.id.textureView);
 
+        server.setText("192.168.191.1");
         Button initButton = (Button) findViewById(R.id.button1);
         Button startButton = (Button) findViewById(R.id.button2);
         Button landButton = (Button) findViewById(R.id.button3);
         Button endButton = (Button) findViewById(R.id.button4);
+
+        ToggleButton flirRecord = (ToggleButton)findViewById(R.id.mStartRecordToggleBtn);
         initButton.setOnClickListener(this);
         startButton.setOnClickListener(this);
         landButton.setOnClickListener(this);
         endButton.setOnClickListener(this);
+        flirRecord.setOnCheckedChangeListener((CompoundButton.OnCheckedChangeListener) this);
 
         /* set resolution */
         DisplayMetrics displayMetrics = new DisplayMetrics();
@@ -434,10 +445,13 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
                 try {
                     String ip = server.getText().toString().trim();
 
-                    socket = new Socket(ip,9527);
-                    out = new PrintWriter( socket.getOutputStream());
+                    socket_coordTrans = new Socket(ip,9527);
+
+                    out_coord = new PrintWriter( socket_coordTrans.getOutputStream());
+                    socket_cmd = new Socket(ip,9527);
+                    out_cmd = new PrintWriter(socket_cmd.getOutputStream());
                     //将Socket对应的输入流包装成BufferedReader
-                    br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                    br = new BufferedReader(new InputStreamReader(socket_coordTrans.getInputStream()));
                     tcpThread.start();
 
                 } catch (Exception e) {
@@ -486,6 +500,49 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
         }
     }
 
+    private void startRecord()
+    {
+        if (flightController != null) {
+            if (flightController.isOnboardSDKDeviceAvailable()) {
+                flightController.sendDataToOnboardSDKDevice(STARTRECORD.getBytes(), djiCompletionCallback);
+                if(socket_cmd.isConnected()) {
+                    out_cmd.print("STARTRECORD");
+                    out_cmd.flush();
+                }
+                else
+                {
+                    showToast("地面站未连接");
+                }
+                showToast("开始录像");
+            } else {
+                showToast(getString(R.string.onboard_device_unavailable));
+            }
+        } else {
+            showToast("未获取权限");
+        }
+    }
+    private void stopRecord()
+    {
+        if (flightController != null) {
+            if (flightController.isOnboardSDKDeviceAvailable()) {
+                flightController.sendDataToOnboardSDKDevice(STOPRECORD.getBytes(), djiCompletionCallback);
+                showToast("停止录像");
+                if(socket_cmd.isConnected()) {
+                    out_cmd.print("STOPRECORD");
+                    out_cmd.flush();
+                }
+                else
+                {
+                    showToast("地面站未连接");
+                }
+            } else {
+                showToast(getString(R.string.onboard_device_unavailable));
+            }
+        } else {
+            showToast("未获取权限");
+        }
+    }
+
     private void stopMission() {
         if (flightController != null) {
             if (flightController.isOnboardSDKDeviceAvailable()) {
@@ -499,6 +556,20 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
         }
     }
 
+    private void abortMission()
+    {
+        if (flightController != null) {
+            if (flightController.isOnboardSDKDeviceAvailable()) {
+                flightController.sendDataToOnboardSDKDevice(ABORT.getBytes(), djiCompletionCallback);
+                showToast("中止任务");
+            } else {
+                showToast(getString(R.string.onboard_device_unavailable));
+            }
+        } else {
+            showToast(getString(R.string.fc_null));
+        }
+
+    }
     @Override
     public void onClick(View v) {
         try {
@@ -593,6 +664,18 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
         uninitPreviewer();
         unregisterReceiver(broadcastReceiver);
         super.onDestroy();
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        if(isChecked) {
+            startRecord();
+//            showToast("开始录像");
+        }
+        else {
+            stopRecord();
+//            showToast("停止录像");
+        }
     }
 }
 

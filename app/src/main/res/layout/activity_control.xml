@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -30,7 +31,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
-                    android:text="@string/live_view"/>
+                    android:text="@string/live_view" />
 
                 <TextView
                     android:id="@+id/stateView"
@@ -38,7 +39,7 @@
                     android:layout_height="match_parent"
                     android:layout_centerHorizontal="true"
                     android:gravity="center_vertical"
-                    android:textStyle="italic"/>
+                    android:textStyle="italic" />
 
             </RelativeLayout>
 
@@ -47,7 +48,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="2"
-                android:hint="@string/server_ip"/>
+                android:hint="@string/server_ip" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -58,13 +59,13 @@
                     android:id="@+id/textureView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_centerInParent="true"/>
+                    android:layout_centerInParent="true" />
 
                 <!-- 外层view，，用来实现画图效果 -->
                 <com.whu.m100.DrawView
                     android:id="@+id/drawView"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent" />
 
             </RelativeLayout>
 
@@ -73,7 +74,7 @@
         <View
             android:id="@+id/line"
             android:layout_width="15dp"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
 
         <!-- 右边的 layout -->
         <LinearLayout
@@ -93,7 +94,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
-                    android:text="@string/pre_detections"/>
+                    android:text="@string/pre_detections" />
 
                 <TextView
                     android:id="@+id/batteryView"
@@ -104,7 +105,7 @@
                     android:hint="@string/NA"
                     android:textColor="@color/white"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
@@ -113,12 +114,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="4"
-                android:contentDescription="@string/hold_pre_image"/>
+                android:contentDescription="@string/hold_pre_image" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="0.5"/>
+                android:layout_weight="0.5" />
 
             <TextView
                 android:id="@+id/history"
@@ -126,7 +127,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text="@string/history"/>
+                android:text="@string/history" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -141,12 +142,12 @@
                     android:background="@color/gray"
                     android:gravity="center"
                     android:text="@string/history_id"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/white" />
 
                 <View
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
-                    android:background="@color/white"/>
+                    android:background="@color/white" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -155,12 +156,12 @@
                     android:background="@color/gray"
                     android:gravity="center"
                     android:text="@string/history_lat"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/white" />
 
                 <View
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
-                    android:background="@color/white"/>
+                    android:background="@color/white" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -169,15 +170,11 @@
                     android:background="@color/gray"
                     android:gravity="center"
                     android:text="@string/history_long"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/white" />
 
             </LinearLayout>
 
-            <ListView
-                android:id="@+id/historyList"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="3"/>
+
 
             <TextView
                 android:id="@+id/mission_time"
@@ -185,7 +182,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1.5"
                 android:gravity="center_vertical"
-                android:hint="@string/mission_not_start"/>
+                android:hint="@string/mission_not_start" />
 
         </LinearLayout>
 
@@ -248,6 +245,12 @@
             android:textColor="@drawable/button_font_color"
             android:textSize="14sp"/>
 
+        <ToggleButton
+            android:id="@+id/mStartRecordToggleBtn"
+            android:layout_width="71dp"
+            android:layout_height="wrap_content"
+            android:text="ToggleButton"
+            tools:text="开始录像" />
         <TextView
             android:id="@+id/velInfo"
             android:layout_width="wrap_content"
@@ -258,7 +261,7 @@
             android:id="@+id/heightView"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="0.77"
             android:background="@color/skyblue"
             android:gravity="center"
             android:textColor="@color/black"
