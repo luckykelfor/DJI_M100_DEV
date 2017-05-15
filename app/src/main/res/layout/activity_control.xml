@@ -19,46 +19,92 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="NestedWeights">
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1">
 
                 <TextView
                     android:id="@+id/liveView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
                     android:text="@string/live_view" />
 
                 <TextView
                     android:id="@+id/stateView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@id/liveView"
+                    android:text="未连接"
+                    android:textStyle="italic"
+                    tools:ignore="RtlHardcoded" />
+
+                <TextView
+                    android:id="@+id/mission_time"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+
+                    android:layout_toRightOf="@id/stateView"
+                    android:hint="@string/mission_not_start"
+                    android:text="用时"
+                    tools:ignore="RtlHardcoded" />
+
+
+                <TextView
+                    android:id="@+id/targetGPS"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@id/mission_time"
+                    android:text="GPS"
+                    android:textSize="14sp"
+                    tools:ignore="RtlHardcoded" />
+
+
+                <EditText
+                    android:id="@+id/server_ip"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@id/targetGPS"
+                    android:hint="@string/server_ip"
+                    android:textSize="14sp"
+                    tools:ignore="RtlHardcoded" />
+
+                <TextView
+                    android:id="@+id/batteryView"
+
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
                     android:layout_centerHorizontal="true"
-                    android:gravity="center_vertical"
-                    android:textStyle="italic" />
+                    android:layout_marginLeft="100dp"
+                    android:layout_toRightOf="@id/server_ip"
+                    android:hint="@string/NA"
+                    android:textColor="@color/white"
+
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap,RtlHardcoded" />
 
             </RelativeLayout>
 
-            <EditText
-                android:id="@+id/server_ip"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:hint="@string/server_ip" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="9">
 
                 <TextureView
                     android:id="@+id/textureView"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerInParent="true" />
 
                 <!-- 外层view，，用来实现画图效果 -->
@@ -71,120 +117,7 @@
 
         </LinearLayout>
 
-        <View
-            android:id="@+id/line"
-            android:layout_width="15dp"
-            android:layout_height="match_parent" />
 
-        <!-- 右边的 layout -->
-        <LinearLayout
-            android:id="@+id/rightLayout"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:orientation="vertical">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1">
-
-                <TextView
-                    android:id="@+id/pre_detections"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:text="@string/pre_detections" />
-
-                <TextView
-                    android:id="@+id/batteryView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentEnd="true"
-                    android:gravity="center"
-                    android:hint="@string/NA"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-            </RelativeLayout>
-
-            <ImageView
-                android:id="@+id/pre_tag"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="4"
-                android:contentDescription="@string/hold_pre_image" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.5" />
-
-            <TextView
-                android:id="@+id/history"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text="@string/history" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@color/gray"
-                    android:gravity="center"
-                    android:text="@string/history_id"
-                    android:textColor="@color/white" />
-
-                <View
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/white" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@color/gray"
-                    android:gravity="center"
-                    android:text="@string/history_lat"
-                    android:textColor="@color/white" />
-
-                <View
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/white" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@color/gray"
-                    android:gravity="center"
-                    android:text="@string/history_long"
-                    android:textColor="@color/white" />
-
-            </LinearLayout>
-
-
-
-            <TextView
-                android:id="@+id/mission_time"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1.5"
-                android:gravity="center_vertical"
-                android:hint="@string/mission_not_start" />
-
-        </LinearLayout>
 
     </LinearLayout>
 
@@ -210,7 +143,8 @@
             android:background="@drawable/button_bg_color"
             android:text="@string/initialize"
             android:textColor="@drawable/button_font_color"
-            android:textSize="14sp"/>
+            android:textSize="14sp"
+            tools:ignore="NestedWeights" />
 
         <Button
             android:id="@+id/button2"
@@ -250,7 +184,7 @@
             android:layout_width="71dp"
             android:layout_height="wrap_content"
             android:text="ToggleButton"
-            tools:text="开始录像" />
+            tools:text="录像" />
         <TextView
             android:id="@+id/velInfo"
             android:layout_width="wrap_content"

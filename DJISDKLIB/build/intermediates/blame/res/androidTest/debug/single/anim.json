@@ -1,35 +1,35 @@
 [
     {
-        "merged": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\core_hyperspace_out.xml",
-        "source": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\anim\\core_hyperspace_out.xml"
+        "merged": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\core_hyperspace_out.xml",
+        "source": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\anim\\core_hyperspace_out.xml"
     },
     {
         "merged": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\core_push_up_in.xml",
         "source": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\anim\\core_push_up_in.xml"
     },
     {
-        "merged": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\core_hyperspace_out.xml",
-        "source": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\anim\\core_hyperspace_out.xml"
+        "merged": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\core_hyperspace_out.xml",
+        "source": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\anim\\core_hyperspace_out.xml"
     },
     {
         "merged": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\core_hyperspace_in.xml",
         "source": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\anim\\core_hyperspace_in.xml"
     },
     {
-        "merged": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\core_zoom_exit_back.xml",
-        "source": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\anim\\core_zoom_exit_back.xml"
-    },
-    {
         "merged": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\core_zoom_enter_back.xml",
         "source": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\anim\\core_zoom_enter_back.xml"
     },
     {
-        "merged": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\core_push_right_in.xml",
-        "source": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\anim\\core_push_right_in.xml"
+        "merged": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\core_zoom_exit_back.xml",
+        "source": "D:\\FastWorkspace\\AndroidProjects\\M100\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\anim\\core_zoom_exit_back.xml"
     },
     {
         "merged": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\core_zoom_exit_back.xml",
         "source": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\anim\\core_zoom_exit_back.xml"
+    },
+    {
+        "merged": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\core_push_right_in.xml",
+        "source": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\bundles\\debug\\res\\anim\\core_push_right_in.xml"
     },
     {
         "merged": "D:\\MyWorkspace\\Android_Projects\\DJI_M100_DEV\\DJISDKLIB\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\core_zoom_enter_back.xml",

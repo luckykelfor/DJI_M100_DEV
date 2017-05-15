@@ -80,7 +80,7 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
     private final String STOPRECORD = "t";
     private final String ABORT= "a";
     private final String TAG = ControlActivity.class.getName();
-    private final String TEAM_NAME = "SHIJIU TEAM";
+    private final String TEAM_NAME = "WiSAR-WHU";
 
     /* DJI variable */
 
@@ -133,8 +133,8 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
                         String srdx = new String(bytes, 18, 3, "ascii");
                         String srdy = new String(bytes, 21, 3, "ascii");
                         String ssid = new String(bytes, 24, 3, "ascii");
-                        String longitude = new String(bytes, 27, 8, "ascii");
-                        String latitude = new String(bytes, 35, 7, "ascii");
+                        String longitude = new String(bytes, 27, 10, "ascii");
+                        String latitude = new String(bytes, 37, 9, "ascii");
 
                         int lux = (int) (Integer.valueOf(slux) * scale);
                         int luy = (int) (Integer.valueOf(sluy) * scale);
@@ -146,9 +146,16 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
                         int rdy = (int) (Integer.valueOf(srdy) * scale);
                         int id = Integer.valueOf(ssid);
                         //TODO:发送到Qt服务器端坐标
-                        String msg = bytes.toString();//show.getText().toString();
+                        String msg  = new String(bytes,0,46,"utf-8");//show.getText().toString();
+//                      String msg = bytes.toString();
                         out_coord.print(msg);
+
                         out_coord.flush();//Very Important!
+                        Message GPS_INFO = new Message();
+                        GPS_INFO.what = 0x87;
+                        GPS_INFO.obj = "Long:"+longitude+" Lati:"+latitude;
+
+
 
 
 //
@@ -206,6 +213,8 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
     private ImageView preImageView;
     private TextureView videoSurface;
 
+    private  TextView targetGPS;
+
     /* data for listview */
     private Map<Integer, Integer> map;
     private List<Bitmap> detectedImagesList;
@@ -216,19 +225,23 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case 0:
-                    historyAdapter.notifyDataSetChanged();
-                    Bitmap tag = videoSurface.getBitmap();
-                    preImageView.setImageBitmap(tag);
-                    detectedImagesList.add(tag);
+//                    historyAdapter.notifyDataSetChanged();
+//                    Bitmap tag = videoSurface.getBitmap();
+//                    preImageView.setImageBitmap(tag);
+//                    detectedImagesList.add(tag);
                     break;
                 case 1:
-                    int position = (int) msg.obj;
-                    historyAdapter.setSelectItem(position);
-                    historyAdapter.notifyDataSetChanged();
-                    preImageView.setImageBitmap(detectedImagesList.get(position));
+//                    int position = (int) msg.obj;
+//                    historyAdapter.setSelectItem(position);
+//                    historyAdapter.notifyDataSetChanged();
+//                    preImageView.setImageBitmap(detectedImagesList.get(position));
                     break;
                 case 0x88:
                     //TODO: 添加处理Qt 服务器端回传的数据
+                    break;
+                case 0x87:
+                    //TODO: 显示目标GPS
+                    targetGPS.setText((String)msg.obj);
                     break;
             }
         }
@@ -302,9 +315,10 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
         velInfo = (TextView) findViewById(R.id.velInfo);
         heightText = (TextView) findViewById(R.id.heightView);
         batteryText = (TextView) findViewById(R.id.batteryView);
-        preImageView = (ImageView) findViewById(R.id.pre_tag);
+//        preImageView = (ImageView) findViewById(R.id.pre_tag);
         videoSurface = (TextureView) findViewById(R.id.textureView);
 
+        targetGPS = (TextView)findViewById(R.id.targetGPS);
         server.setText("192.168.191.1");
         Button initButton = (Button) findViewById(R.id.button1);
         Button startButton = (Button) findViewById(R.id.button2);
@@ -322,8 +336,8 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
         DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         ViewGroup.LayoutParams params = videoSurface.getLayoutParams();
-        params.width = displayMetrics.widthPixels / 2;
-        params.height = displayMetrics.heightPixels / 2;
+//        params.width = displayMetrics.widthPixels ;
+//        params.height = displayMetrics.heightPixels;
         scale = (double) params.width / 640;
         videoSurface.setLayoutParams(params);
 

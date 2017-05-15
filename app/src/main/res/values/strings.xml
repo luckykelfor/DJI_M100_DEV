@@ -1,26 +1,26 @@
 <resources>
-    <string name="app_name">M100</string>
+    <string name="app_name">WiSAR</string>
 
-    <string name="connected"> Connected</string>
-    <string name="disconnected">Disconnected</string>
+    <string name="connected"> 已连接</string>
+    <string name="disconnected">未连接</string>
 
     <!-- button -->
-    <string name="initialize">INITIALIZE</string>
+    <string name="initialize">初始化</string>
     <string name="take_off">起飞</string>
     <string name="land">降落</string>
-    <string name="start_mission">START MISSION</string>
-    <string name="stop_mission">STOP MISSION</string>
+    <string name="start_mission">开始任务</string>
+    <string name="stop_mission">结束任务</string>
     <!-- button end -->
 
     <string name="get_fc_success">获取fc成功</string>
-    <string name="fc_null">flight controller is null</string>
+    <string name="fc_null">未获取权限</string>
     <string name="onboard_device_unavailable">未找到 Onboard 设备</string>
     <string name="not_flying">飞机未起飞</string>
 
-    <string name="live_view">LIVE VIEW</string>>
+    <string name="live_view">实时预览</string>>
     <string name="pre_detections">PRE DETECTIONS</string>
     <string name="history">HISTORY</string>
-    <string name="mission_not_start">MISSION NOT START</string>
+    <string name="mission_not_start">任务未开始</string>
 
     <string name="server_ip">SERVER IP</string>>
     <string name="history_id">ID</string>
@@ -28,7 +28,7 @@
     <string name="history_long">Long</string>
     <string name="hold_pre_image">hold pre-detected image</string>
 
-    <string name="velocity">velocity</string>
+    <string name="velocity">速度</string>
     <string name="not_available">Not available</string>
     <string name="NA">N/A</string>
 </resources>
