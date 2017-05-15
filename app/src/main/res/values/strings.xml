@@ -29,6 +29,6 @@
     <string name="hold_pre_image">hold pre-detected image</string>
 
     <string name="velocity">速度</string>
-    <string name="not_available">Not available</string>
+    <string name="not_available">未知高度</string>
     <string name="NA">N/A</string>
 </resources>
