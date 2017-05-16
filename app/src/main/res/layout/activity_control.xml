@@ -34,14 +34,14 @@
                     android:layout_height="match_parent"
                     android:layout_alignParentTop="true"
                     android:layout_weight="1"
+                    android:gravity="center"
                     android:text="@string/live_view" />
 
                 <TextView
                     android:id="@+id/stateView"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@id/liveView"
+                    android:gravity="center"
                     android:layout_weight="1"
                     android:text="未连接"
                     android:textStyle="italic"
@@ -52,7 +52,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-
+                    android:gravity="center"
                     android:hint="@string/mission_not_start"
                     android:text="用时"
                     tools:ignore="RtlHardcoded" />
@@ -60,15 +60,30 @@
 
                 <TextView
                     android:id="@+id/targetGPS"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-
+                    android:gravity="center"
                     android:text="GPS"
                     android:textSize="14sp"
                     tools:ignore="RtlHardcoded" />
 
+                <EditText
+                    android:id="@+id/targetLong"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.80"
+                    android:hint="经度"
+                    android:textSize="14sp"
+                    tools:ignore="RtlHardcoded" />
 
+                <EditText
+                    android:id="@+id/targetLat"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.80"
+                    android:hint="纬度"
+                    android:textSize="14sp"
+                    tools:ignore="RtlHardcoded" />
                 <EditText
                     android:id="@+id/server_ip"
                     android:layout_width="0dp"
@@ -78,6 +93,7 @@
                     android:textSize="14sp"
                     tools:ignore="RtlHardcoded" />
 
+
                 <TextView
                     android:id="@+id/batteryView"
 
@@ -86,7 +102,7 @@
                     android:layout_weight="1"
                     android:hint="@string/NA"
                     android:textColor="@color/white"
-
+                    android:gravity="center"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     tools:ignore="RelativeOverlap,RtlHardcoded" />

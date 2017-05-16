@@ -124,38 +124,42 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
                 @Override
                 public void onResult(byte[] bytes) {
                     try {
-                        String slux = new String(bytes, 0, 3, "ascii");
-                        String sluy = new String(bytes, 3, 3, "ascii");
-                        String srux = new String(bytes, 6, 3, "ascii");
-                        String sruy = new String(bytes, 9, 3, "ascii");
-                        String sldx = new String(bytes, 12, 3, "ascii");
-                        String sldy = new String(bytes, 15, 3, "ascii");
-                        String srdx = new String(bytes, 18, 3, "ascii");
-                        String srdy = new String(bytes, 21, 3, "ascii");
-                        String ssid = new String(bytes, 24, 3, "ascii");
-                        String longitude = new String(bytes, 27, 10, "ascii");
-                        String latitude = new String(bytes, 37, 9, "ascii");
+                        if(bytes.length>=46)//Get target ROI(Position) and its GPS info
+                        {
 
-                        int lux = (int) (Integer.valueOf(slux) * scale);
-                        int luy = (int) (Integer.valueOf(sluy) * scale);
-                        int rux = (int) (Integer.valueOf(srux) * scale);
-                        int ruy = (int) (Integer.valueOf(sruy) * scale);
-                        int ldx = (int) (Integer.valueOf(sldx) * scale);
-                        int ldy = (int) (Integer.valueOf(sldy) * scale);
-                        int rdx = (int) (Integer.valueOf(srdx) * scale);
-                        int rdy = (int) (Integer.valueOf(srdy) * scale);
-                        int id = Integer.valueOf(ssid);
-                        //TODO:发送到Qt服务器端坐标
-                        String msg  = new String(bytes,0,46,"utf-8");//show.getText().toString();
+                            String slux = new String(bytes, 0, 3, "ascii");
+                            String sluy = new String(bytes, 3, 3, "ascii");
+                            String srux = new String(bytes, 6, 3, "ascii");
+                            String sruy = new String(bytes, 9, 3, "ascii");
+                            String sldx = new String(bytes, 12, 3, "ascii");
+                            String sldy = new String(bytes, 15, 3, "ascii");
+                            String srdx = new String(bytes, 18, 3, "ascii");
+                            String srdy = new String(bytes, 21, 3, "ascii");
+                            String ssid = new String(bytes, 24, 3, "ascii");
+                            String longitude = new String(bytes, 27, 10, "ascii");
+                            String latitude = new String(bytes, 37, 9, "ascii");
+
+                            int lux = (int) (Integer.valueOf(slux) * scale);
+                            int luy = (int) (Integer.valueOf(sluy) * scale);
+                            int rux = (int) (Integer.valueOf(srux) * scale);
+                            int ruy = (int) (Integer.valueOf(sruy) * scale);
+                            int ldx = (int) (Integer.valueOf(sldx) * scale);
+                            int ldy = (int) (Integer.valueOf(sldy) * scale);
+                            int rdx = (int) (Integer.valueOf(srdx) * scale);
+                            int rdy = (int) (Integer.valueOf(srdy) * scale);
+                            int id = Integer.valueOf(ssid);
+                            //TODO:发送到Qt服务器端坐标
+                            String msg  = new String(bytes,0,46,"utf-8");//show.getText().toString();
 //                      String msg = bytes.toString();
-                        out_coord.print(msg);
+                            out_coord.print(msg);
 
-                        out_coord.flush();//Very Important!
-                        Message GPS_INFO = new Message();
-                        GPS_INFO.what = 0x87;
-                        GPS_INFO.obj = "Long:"+longitude+" Lati:"+latitude;
+                            out_coord.flush();//Very Important!
+                            Message GPS_INFO = new Message();
+                            GPS_INFO.what = 0x87;
+                            GPS_INFO.obj = longitude+latitude;
 
 
+                            handler.sendMessage(GPS_INFO);
 
 
 //
@@ -175,8 +179,19 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
 //                            }.start();
 //                        }
 
-                        drawView.setXY(lux, luy, rux, ruy, ldx, ldy, rdx, rdy, id);
-                        drawView.invalidate();
+                            drawView.setXY(lux, luy, rux, ruy, ldx, ldy, rdx, rdy, id);
+                            drawView.invalidate();
+                        }
+                        else if(bytes.length<=30)// Confirm the GPS (sent back from onboard)
+                        {
+                            Message msg = new Message();
+                            msg.what = 0x89;
+                            msg.obj = new String(bytes,"ascii");
+//                            showToast(bytes.toString());
+                            handler.sendMessage(msg);
+
+                        }
+
                     } catch (UnsupportedEncodingException e) {
                         Log.d(TAG, "Not ASCII string !");
                     }
@@ -214,6 +229,8 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
     private TextureView videoSurface;
 
     private  TextView targetGPS;
+    private EditText targetGPS_long;
+    private EditText targetGPS_latt;
 
     /* data for listview */
     private Map<Integer, Integer> map;
@@ -241,7 +258,13 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
                     break;
                 case 0x87:
                     //TODO: 显示目标GPS
-                    targetGPS.setText((String)msg.obj);
+                    String GPS = (String)msg.obj;
+
+                    targetGPS_long.setText(GPS.substring(0,9));
+                    targetGPS_latt.setText(GPS.substring(10));
+                    break;
+                case 0x89:
+                    showToast((String)msg.obj);
                     break;
             }
         }
@@ -319,6 +342,8 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
         videoSurface = (TextureView) findViewById(R.id.textureView);
 
         targetGPS = (TextView)findViewById(R.id.targetGPS);
+        targetGPS_long = (EditText)findViewById(R.id.targetLong) ;
+        targetGPS_latt = (EditText)findViewById(R.id.targetLat);
         server.setText("192.168.191.1");
         Button initButton = (Button) findViewById(R.id.button1);
         Button startButton = (Button) findViewById(R.id.button2);
@@ -330,7 +355,7 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
         startButton.setOnClickListener(this);
         landButton.setOnClickListener(this);
         endButton.setOnClickListener(this);
-        flirRecord.setOnCheckedChangeListener((CompoundButton.OnCheckedChangeListener) this);
+        flirRecord.setOnCheckedChangeListener( this);
 
         /* set resolution */
         DisplayMetrics displayMetrics = new DisplayMetrics();
@@ -472,6 +497,11 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
                 }
             }
         }).start();
+
+
+
+        //Send StartSearchingGPS location
+        sendSearchingGPS();
     }
 
     private void takeOff() {
@@ -514,6 +544,26 @@ public class ControlActivity extends Activity implements SurfaceTextureListener,
         }
     }
 
+    private void sendSearchingGPS()
+    {
+        if (flightController != null) {
+            if (flightController.isOnboardSDKDeviceAvailable()) {
+                String LONG = new String("LONG");
+                String LATT = new String("LATT");
+                String GPS = LONG.concat(targetGPS_long.getText().toString())+LATT.concat(targetGPS_latt.getText().toString());
+
+
+                flightController.sendDataToOnboardSDKDevice(GPS.getBytes(), djiCompletionCallback);
+//                flightController.sendDataToOnboardSDKDevice(LATT.getBytes(), djiCompletionCallback);
+
+                showToast("发送GPS");
+            } else {
+                showToast(getString(R.string.onboard_device_unavailable));
+            }
+        } else {
+            showToast("未获取权限");
+        }
+    }
     private void startRecord()
     {
         if (flightController != null) {
